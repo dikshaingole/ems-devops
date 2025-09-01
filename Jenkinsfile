@@ -5,10 +5,12 @@ pipeline {
     }
     stages {
         stage('Checkout') {
-            steps {
-                git 'https://github.com/PranikNikose/ems-devops.git'
-            }
-        }
+			steps {
+				git branch: 'main',
+				url: 'https://github.com/PranikNikose/ems-devops.git',
+				credentialsId: 'GitHub-Creds-PranikN'
+			}
+		}
         stage('Backend Unit Tests') {
             steps {
                 bat 'cd backend && mvn test'

@@ -1,4 +1,4 @@
-# Use official OpenJDK 17 base image
+# Use official OpenJDK 17 base Image
 FROM openjdk:17-jdk-alpine
 
 # Set working directory

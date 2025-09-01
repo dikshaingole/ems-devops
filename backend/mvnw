@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ -f ".mvn/wrapper/maven-wrapper.jar" ]; then
+  .mvn/wrapper/maven-wrapper.sh "$@"
+else
+  mvn "$@"
+fi

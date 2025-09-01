@@ -1,0 +1,21 @@
+# compiled output
+/dist
+/build
+/.angular
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.iml
+
+# misc
+.DS_Store
+Thumbs.db

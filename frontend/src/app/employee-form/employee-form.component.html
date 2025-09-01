@@ -1,0 +1,25 @@
+<h2 class="form-title">{{ isUpdate ? 'Update Employee' : 'Add Employee' }}</h2>
+
+<form (ngSubmit)="save()" #empForm="ngForm" class="employee-form">
+  
+  <div class="form-group">
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="employee.name" name="name" required />
+  </div>
+
+  <div class="form-group">
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="employee.email" name="email" required />
+  </div>
+
+  <div class="form-group">
+    <label>Department:</label>
+    <input type="text" [(ngModel)]="employee.department" name="department" required />
+  </div>
+
+  <button type="submit">{{ isUpdate ? 'Update' : 'Save' }}</button>
+</form>
+
+<div *ngIf="message" class="message">
+  {{ message }}
+</div>

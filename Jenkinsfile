@@ -22,10 +22,10 @@ pipeline {
             }
         }
         stage('Frontend Unit Tests') {
-            steps {
-                bat 'cd frontend && npm install && npx ng test --watch=false'
-            }
-        }
+			steps {
+				bat 'cd frontend && npm install && npx ng test --watch=false --browsers=ChromeHeadless'
+			}
+		}
         stage('Build Frontend') {
             steps {
                 bat 'cd frontend && npx ng build '

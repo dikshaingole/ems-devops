@@ -9,11 +9,12 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
+RUN npm run build --prod
 
 # Stage 2: Serve with Nginx
 FROM nginx:alpine
 
-COPY --from=build /app/dist /usr/share/nginx/html
+# Copy Angular build output to Nginx html folder
+COPY --from=build /app/dist/ems-angular-frontend /usr/share/nginx/html
 
 EXPOSE 80

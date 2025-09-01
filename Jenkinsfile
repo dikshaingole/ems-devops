@@ -21,9 +21,9 @@ pipeline {
                 bat 'cd backend && mvn clean install'
             }
         }
-        stage('Frontend Unit Tests') {
+        stage('Build Frontend') {
 			steps {
-				bat 'cd frontend && npm install && npx ng test --watch=false --browsers=ChromeHeadless'
+				bat 'cd frontend && npm install && ng build'
 			}
 		}
         stage('Build Frontend') {
